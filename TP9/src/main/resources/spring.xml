@@ -1,0 +1,30 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <bean id="idCtrl" class="cigma.pfe.controllers.ClientController" scope="prototype">
+      <constructor-arg ref="service" />
+    </bean>
+
+    <bean id="service" class="cigma.pfe.services.ClientServiceImpl" scope="prototype">
+        <constructor-arg ref="repo" />
+    </bean>
+
+    <bean id="repo" class="cigma.pfe.repositories.ClientRepositoryImpl" scope="prototype">
+    </bean>
+
+    <bean id="idCtrlF" class="cigma.pfe.controllers.FactureController" scope="prototype">
+        <constructor-arg ref="serviceF" />
+    </bean>
+
+    <bean id="serviceF" class="cigma.pfe.services.FactureServiceImpl" scope="prototype">
+        <constructor-arg ref="repoF" />
+    </bean>
+
+    <bean id="repoF" class="cigma.pfe.repositories.FactureRepositoryImpll" scope="prototype">
+
+    </bean>
+
+
+
+</beans>
